@@ -16,40 +16,7 @@ Welcome to the **Entertainment Recommendation System** — a personalized conten
 
 ## 📂 Project Structure
 
-Entertainment-Recommendation-System/
-│
-├── app.py                      # Main Streamlit app
-├── Dockerfile                  # Docker build configuration
-├── requirements.txt            # Python dependencies
-├── .env                        # (Optional) Environment variables
-│
-├── data/
-│   ├── raw_data/
-│   │   ├── anime/
-│   │   ├── movie/
-│   │   └── web_series/
-│   └── processed_data/
-│       ├── anime/
-│       ├── movie/
-│       └── web_series/
-│
-├── artifacts/
-│   ├── anime/
-│   ├── movie/
-│   └── web_series/
-│
-├── icon/                       # Icons for tab bar
-├── image/                      # Background images
-├── notebook/
-│   └── *.ipynb                 # Preprocessing notebooks
-│
-└── src/
-    ├── recommender/
-    │   └── base.py             # Recommendation logic
-    ├── config/
-    │   └── global_paths.py     # Global path management
-    └── utils/
-        └── logger.py           # Logging utility
+<pre lang="markdown"> <code>```bash Entertainment-Recommendation-System/ │ ├── app.py # Main Streamlit app ├── Dockerfile # Docker build configuration ├── requirements.txt # Python dependencies ├── .env # (Optional) Environment variables │ ├── data/ │ ├── raw_data/ │ │ ├── anime/ │ │ ├── movie/ │ │ └── web_series/ │ └── processed_data/ │ ├── anime/ │ ├── movie/ │ └── web_series/ │ ├── artifacts/ │ ├── anime/ │ ├── movie/ │ └── web_series/ │ ├── icon/ # Icons for tab bar ├── image/ # Background images ├── notebook/ │ └── *.ipynb # Preprocessing notebooks │ └── src/ ├── recommender/ │ └── base.py # Recommendation logic ├── config/ │ └── global_paths.py # Global path management └── utils/ └── logger.py # Logging utility ```</code> </pre>
 
 
 ---
