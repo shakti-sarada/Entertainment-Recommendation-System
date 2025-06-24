@@ -6,3 +6,8 @@ tqdm
 scikit-learn
 streamlit
 rapidfuzz
+Pillow
+joblib
+python-dotenv
+PyYAML
+orjson
