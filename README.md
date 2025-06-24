@@ -24,6 +24,9 @@ Entertainment-Recommendation-System/
 ├── requirements.txt            # Python dependencies
 ├── .env                        # (Optional) Environment variables
 │
+├── config/
+|       └── global_paths.py     # Global path management
+|
 ├── data/
 │   ├── raw_data/
 │   │   ├── anime/
@@ -47,8 +50,6 @@ Entertainment-Recommendation-System/
 └── src/
     ├── recommender/
     │   └── base.py             # Recommendation logic
-    ├── config/
-    │   └── global_paths.py     # Global path management
     └── utils/
         └── logger.py           # Logging utility
 ```
