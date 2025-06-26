@@ -112,7 +112,68 @@ docker build -t recommender-app .
 docker run -p 8501:8501 recommender-app
 ```
 
+## 🚀 Deployment on Hugging Face Spaces
+
+You can deploy this Streamlit-based recommendation system on **[Hugging Face Spaces](https://huggingface.co/spaces)** using the following steps:
+
+### 🛠 Prerequisites
+
+- A [Hugging Face account](https://huggingface.co/join)
+- Git installed on your system
+- [Git LFS](https://git-lfs.com/) installed (for large files like `.pkl`, `.index`, `.jpg`)
+
 ---
+
+### 🌐 Step-by-Step Guide
+
+#### 1. Create a new Space
+- Go to [https://huggingface.co/spaces](https://huggingface.co/spaces)
+- Click **“Create new Space”**
+- Fill the form:
+  - **Name**: `Entertainment-Recommendation-System`
+  - **SDK**: `Docker`
+  - **Visibility**: `Public` or `Private`
+- Click **“Create Space”**
+
+#### 2. Clone the created Space
+```bash
+git clone https://huggingface.co/spaces/<your-username>/Entertainment-Recommendation-System
+cd Entertainment-Recommendation-System
+```
+
+#### 3. Copy your project files (excluding `artifacts/`)
+```bash
+cp -r ../YourLocalProject/* .
+cp -r ../YourLocalProject/.* . 2>/dev/null  # Optional: hidden files
+rm -rf artifacts/  # Remove large models if not using LFS
+```
+
+#### 4. Track large files using Git LFS
+```bash
+git lfs install
+git lfs track "*.pkl" "*.index" "*.jpg"
+git add .gitattributes
+```
+
+#### 5. Push to Hugging Face
+```bash
+git add .
+git commit -m "Initial push to Hugging Face Spaces"
+git push
+```
+
+---
+
+### ✅ Deployment
+
+Once the build completes, your app will be accessible at:
+
+```
+https://huggingface.co/spaces/<your-username>/Entertainment-Recommendation-System
+```
+
+You can monitor the logs while it builds. The app should be live in a couple of minutes.
+
 
 ## 📒 Logging
 
